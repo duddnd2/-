@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>반려식물 키우기</title>
+        <link rel="stylesheet" href="반려식물키우기홈.css">
+        <style>
+*{padding: 0px; margin: 0px;}
+
+a{text-decoration: none;}
+
+header{
+    width: 1050px;
+    height: 180px;
+    background: #ffffff;   
+    position: relative;
+}
+#main_logo{
+    position: absolute;
+    top: 75px;
+    left: 400PX;
+}
+#menu{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+#menu a{color: #4aa167;}
+
+#page{width: 1100px; margin: 0px auto;}
+
+
+#hyperlink{
+    width: 700px;
+    margin: 120px auto;
+    overflow : hidden;
+}
+
+ul li{
+    list-style:none;
+}
+
+#navigationBar {
+        font:bold 16px "malgun gothic";
+		width:480px;
+		height:50px;
+		background: rgb(247, 247, 247);
+        border-style: solid;
+        border-color:#4aa167;
+        border-radius: 20px;
+		color:black;
+		line-height: 50px; 
+		margin:0 auto;
+		text-align: center;
+}
+
+#navigationBar > ul > li > ul {
+	width:150px;
+	display:none;
+	position: absolute;
+	font-size:14px;
+	background: rgb(247, 247, 247);
+    border-style: solid;
+    border-color:#584F3F;
+    border-radius: 20px;
+	}
+
+#navigationBar > ul > li:hover {
+	background: #4aa167;
+    border-radius:15px;
+}
+
+#navigationBar > ul > li:hover > a{
+	color: #ffffff;
+}
+
+#navigationBar > ul > li:hover > ul {
+	display:block;
+}
+
+#navigationBar > ul > li > ul > li:hover {
+	background: #584F3F;
+	border-radius: 15px;
+}
+
+#navigationBar > ul > li > ul > li > button{
+    color:#584F3F;
+    font-size:14px;
+    font-style: bold;
+    border:none;
+    background-color: rgb(247, 247, 247);
+}
+#navigationBar > ul > li > ul > li:hover > button{
+    color:#ffffff;
+    font-size:14px;
+    font-style: bold;
+    border:none;
+    background-color: #584F3F;
+}
+
+#navigationBar > ul > li > a {
+    color:#4aa167;
+    }
+
+
+#navigationBar a {
+    margin:10px;
+}
+#navigationBar > ul > li {
+    float: left;
+    width: 160px;
+    position: relative;
+    
+}
+.header{
+    background: #ffffff;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+.header image{
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+#value{
+    border: none;
+    background: #584F3F;
+    padding: 6px;
+    font-size: 18px;
+    width: 50%;
+    border-radius: 6px;
+    color: white;
+}
+#value:focus{
+  outline: none;
+}
+#picture{
+    width: 670px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.pic{
+    width: 150px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background: #6eb083;
+}
+.pic img{
+    display: block;
+}
+.pic{
+    text-align: center;
+}
+.name > a{
+    font: bold 25px "malgun gothic";
+    color:#ffffff;
+}
+        </style>
+        <script src="자바스크립트.js"></script>
+    </head>
+    <body id="page">
+            <header>
+                <div id="main_logo" >
+                    <a href="반려식물 키우기_메인.html">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MTZfODMg/MDAxNjUyNzExODQzOTUw.ZR2Wbu9G2ZQYo6RI_1bfX2AQxM2GNpFRlgDK0BEGDhog.iatKPvp0zJNdFmXrtHNnImVWfs2kxhQNpGb-7y7eVFcg.PNG.ktelescope/%EB%B0%98%EB%A0%A4%EC%8B%9D%EB%AC%BC%ED%82%A4%EC%9A%B0%EA%B8%B0%EB%A1%9C%EA%B3%A0.png?type=w966" alt="메인로고" width="300">
+                    </a>
+                </div>
+                <div id="menu">
+                    <a href="#">회원가입</a> |
+                    <a href="#">로그인</a> |
+                    <a href="#">회원탈퇴</a>
+                </div>
+            </header>
+            <hr>
+            <div id="search">
+                <div class="header">
+                    <div id="image">
+                        <a href="나만의 반려식물 고르기111.html">
+                            <img src="나만의반려식물고르기로고.png" width="300px">
+                        </a>
+                    </div>
+                    <br>
+                    <input onkeyup="filter()" type="text" id="value" placeholder="식물 이름을 검색해보세요">
+                    <!-- https://thisisspear.tistory.com/40 검색창-->
+                </div>
+                <nav>
+                    <div id="navigationBar">
+                        <ul>
+                            <li>
+                                <a href="#">잎을 기르는</a>
+                                <ul>
+                                    <li><button id="long1">여러해 살이</button></li>
+                                    <li><button id="short1">한두해 살이</button></li>
+                                    <li><button id="animal1">반려동물과 함께</button></li>
+                                    <li><button id="air1">공기를 정화해 주는</button></li>
+                                    <li><button id="vine1">덩굴식물</button></li>
+                                    <li><button id="small1">크기가 작은</button></li>
+                                    <li><button id="big1">크기가 큰</button></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">화초</a>
+                                <ul>
+                                    <li><button id="long2">여러해 살이</button></li>
+                                    <li><button id="short2">한두해 살이</button></li>
+                                    <li><button id="animal2">반려동물과 함께</button></li>
+                                    <li><button id="eat2">먹을 수 있는</button></li>
+                                    <li><button id="smell2">향기가 나는</button></li>
+                                    <li><button id="small2">크기가 작은</button></li>
+                                    <li><button id="big2">크기가 큰</button></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">선인장/다육식물</a>
+                                <ul>
+                                    <li><button id="long3">여러해 살이</button></li>
+                                    <li><button id="short3">한두해 살이</button></li>
+                                    <li><button id="animal3">반려동물과 함께</button></li>
+                                    <li><button id="small3">크기가 작은</button></li>
+                                    <li><button id="big3">크기가 큰</button></li>
+                                    <li><button id="vine3">덩굴식물</button></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- https://blog.naver.com/PostView.naver?blogId=bgpoilkj&logNo=221150512824 메뉴작동참고-->
+                </nav>
+                <br>
+                <div id="picture">
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMTMz/MDAxNjUzODQxNjg4MzM0.cc0NrwDo1t-E3EMigXre4YIlaSE1TS_HsVoyjSduk5og.ldx-EDJtOaaIFPELCUziSX7MerCa5Ca1E0KnBYKfmtcg.JPEG.ktelescope/%EB%93%9C%EB%9D%BC%EC%84%B8%EB%82%98.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                드라세나류
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMzEg/MDAxNjUzOTA3ODcxNDUy.4kWTgQMQ5uLaNFDslUwWMuWl9-l_jDyW5S72iLeimZIg.MXGLZLSVwZRZL8GlPuy5hLAj97DCCWGdacT-Co_GJQkg.JPEG.ktelescope/%EB%A7%88%EB%8B%A4%EA%B0%80%EC%8A%A4%EC%B9%B4%EB%A5%B4_%EC%9E%90%EC%8A%A4%EB%AF%BC.jpg?type=w966" width="150" length="225">
+                        <div class="name llong1 llong2 bbig1 bbig2 aair1 ssmell2">
+                            <a href="#">
+                                마다가스카르
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMjMx/MDAxNjUzOTA3NjY1MDEz.sokTP0phKzsqFYGwVeR4-knG1Sfes-OfZIaODddi58sg.1J2RnvleBsqGnmrxX9bewEJs0ZDgqcY-5hrfw-Rht7Ug.JPEG.ktelescope/%ED%95%84%EB%A1%9C%EB%8D%B4%EB%93%9C%EB%A1%A0.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                필로덴드론
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMTQz/MDAxNjUzOTA3NjU1NzM2.P0uSc8b9LWSgURxhbzeT38eZEq98kFZJyNvAE_radd4g.VUBL5MotG_Qd9RcDBUywfpCqcZoKDIwcTIqlb3fF2CIg.JPEG.ktelescope/%EC%85%B0%ED%94%8C%EB%A0%88%EB%9D%BC.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                셰플레라
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMjgw/MDAxNjUzOTExNzU4MjQ5.pBnZiDA-X6uTp8X0hrTS915MyQRjnShgHKvOGhfDqOMg.OgU1D9nMOwx2Jccs2dg4t_VrC4AgEyNWxsY1A_vxmzAg.JPEG.ktelescope/%EA%BD%83%EA%B8%B0%EB%A6%B0.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                꽃기린
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMTQ3/MDAxNjUzOTExNzYwMjEw._1K-HbWvv1nfsCAi3kFEKpMRvakEGM0uZwqMlnjw-IAg.laWhz3qfXfYmdNlXO8pFO6TsPNN0AQZKiPcTztqVmWMg.JPEG.ktelescope/%EB%8B%A4%EC%9C%A1%EC%8B%9D%EB%AC%BC_%EC%97%90%EC%BC%80%EB%B2%A0%EB%A6%AC%EC%95%84.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                다육식물
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMzMg/MDAxNjUzOTExNzYxODIy.RG5rp7Gg9uY6sHP3TAiAqpZE0soLCG26Dwgg1f5ZPdgg.yOOfmbivyRzJjMfwOzmYq1G6zJ2m4rzCV7gLTVihaXwg.JPEG.ktelescope/%EB%8F%99%EB%B0%B1%EA%BD%83.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                동백꽃
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMjgw/MDAxNjUzOTExNzY2NDcy.5rR4cZSe8c8o-3Ci-KU77f5CpwWKNXQvntE3k4yuYewg.VO8i1AIb8jPGGU57A3WVMePtSNjBoSGC8bQVKvzRslwg.JPEG.ktelescope/%EB%A7%A8%EB%93%9C%EB%9D%BC%EB%AF%B8.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                맨드라미
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMTA0/MDAxNjUzOTExNzY3ODIx.uJGQai5xDLtRvurWCmD4YhT6yV5FkXrWUhuvhXOx894g.9FSOVfNhmWmMj9ll5tLxSPLuRzkTugKdxYSiCAS6GQEg.JPEG.ktelescope/%EB%B0%94%EC%A7%88.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                바질
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzFfMjMg/MDAxNjUzOTIzMzIyNTAw.IVlVnF91rDfA9464aQb6ohti7Wbkz4h_NcGFPV_VPa4g.9lYdXats15uh86yfgojcxJKep5-sv4mn78oHPKaw-V8g.JPEG.ktelescope/%EB%B0%B1%EC%9D%BC%ED%99%8D.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                백일홍
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMjg3/MDAxNjUzOTExNzcxOTIx.aBnosP2cNvENk9mQeLZPC5h-LSnLTwsoUQvjJo40-Mkg.xyXs-ACmR3bB3fj_YijcG55eIUJwoKIjFPaZxWjI2DYg.JPEG.ktelescope/%EC%82%B0%EC%84%B8%EB%B2%A0%EB%A6%AC%EC%95%84.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                산세베리아
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfOTQg/MDAxNjUzOTExNzc4MTIz.qp8BjRCVPAtWckirfR6skgkSf3AyprvXtk7kov_RREYg.wQ8R264RXYBLydPhYmBDHT5JRXLLqad23RBATbfq4A8g.JPEG.ktelescope/%EC%95%84%EC%9D%B4%EB%B9%84.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                아이비
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfNjMg/MDAxNjUzOTExNzc0MDc5.LXM_ATOXtGq5RgMG6uVWoRQjjfaeCV44GOigyiPRWI4g.RGEQEIbif2LnvmoCoCPt2CbZbNOLzGoQDLAWzogvibkg.JPEG.ktelescope/%EC%8B%9C%EA%B3%84%EA%BD%83.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                시계꽃
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfNjUg/MDAxNjUzOTExNzc1NTAw.xsXl0nyVvvkkDLgXlDmwvZ7pc952rB_5cOjwZrtJlkgg.7BOal4JLPY_CZBKFqmuJrmwpQsPvM3C8FHtuyQoQlIsg.JPEG.ktelescope/%EC%95%84%EB%94%94%EC%95%88%ED%85%80.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                아디안텀
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfNjMg/MDAxNjUzOTExNzc2OTIw.69dWVrKAaXhK6EVqTFfhVhpopJK33MfudhinE1p2XEog.eQUxcZHDIWl0gECMa-ccyR-Sv8uxwVYPSgnP6XTDmu0g.JPEG.ktelescope/%EC%95%84%EB%A7%88%EB%A6%B4%EB%A6%AC%EC%8A%A4.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                아마릴리스
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMTQ5/MDAxNjUzOTExNzgxOTYy._NYaafcyHUBHQg-o-YlxTyZBIJ2vNbpOFEtDdQDaI6Mg.YB1EdMTYrYPdlQN4wRS-9BJqRL2dP_h6fzrcBl7NqPkg.JPEG.ktelescope/%EC%B9%BC%EB%9E%91%EC%BD%94%EC%97%90%EB%B8%94%EB%A1%9C%EC%8A%A4%ED%8E%A0%EB%94%94%EC%95%84%EB%82%98.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                칼랑코에
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMjAw/MDAxNjUzOTExNzgzNDA0.ZF_Q0V45LJrYix9giHAmc3eFhliuX1mquk8Sf7U4110g.zpW_o2LiSK1lB4Cb5vVa-WlfUBspbwB7MFU2UsloO9Mg.JPEG.ktelescope/%ED%8E%9C%ED%83%80%EC%8A%A4.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                펜타스
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfNjEg/MDAxNjUzOTExNzg0NjM5.xfkIbZRCvRSyqwhqWaHD50TC4u-gdUO3P8GjIPm68DMg.b4e-7JArnL6uqvQND_sEl1XVY1lPPTWuXJkaG9gllbcg.JPEG.ktelescope/%ED%91%B8%EB%B0%80%EB%9D%BC%EA%B3%A0%EB%AC%B4%EB%82%98%EB%AC%B4.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                고무나무
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="https://postfiles.pstatic.net/MjAyMjA1MzBfMjA5/MDAxNjUzOTExNzg2MDc5.BwG2W8P3UhWkDrGmUHHHDiqm1aLIJfyoSmdaA-DwKXcg.d9_m27BGdel5-oqJTDKIYanoeT5p9mPiEwh3dKQlOKEg.JPEG.ktelescope/%ED%94%84%EB%A6%AC%EC%A7%80%EC%96%B4.jpg?type=w966" width="150" length="225">
+                        <div class="name">
+                            <a href="#">
+                                프리지어
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
